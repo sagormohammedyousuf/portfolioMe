@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.scss" />
+    <link rel="stylesheet" href="animate.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <title>sm Yousuf</title>
+  </head>
+  <body>
+    <div id="page">
+      <header class="primary-header">
+        <div class="container">
+          <div class="nav-wrapper">
+            <div class="nav-left">
+              <a href="#"><img src="james.jpg" alt="sagor" />sagor.</a>
+              <button
+                class="mobile-nav-toggle"
+                aria-controls="primary-navigation"
+                aria-expanded="false"
+              >
+                <span class="visually-hidden"></span>
+              </button>
+            </div>
+            <nav class="primary-navigation" id="primary-navigation">
+              <ul aria-label="Primary" role="list" class="nav-list">
+                <li id="homeButton">
+                  <a href="#home" class="active" id="homeLink">Home</a>
+                </li>
+                <li><a href="#about" id="aboutLink">About</a></li>
+                <li><a href="#skills" id="skillLink">Skills</a></li>
+                <li><a href="#portfolio" id="portfolioLink">Portfolio</a></li>
+                <li>
+                  <a href="#testimonials" id="testimonialLink">Testimonials</a>
+                </li>
+                <li><a href="#contact" id="contactLink">Contact</a></li>
+              </ul>
+            </nav>
+            <button class="hire-me-btn btn">Hire me</button>
+          </div>
+        </div>
+      </header>
+      <!-- <nav class="primary-navigation" id="primary-navigation">
+        <div class="nav-left">
+          <img src="james.jpg" />
+          <p class="name">sagor.</p>
+        </div>
+        <ul aria-label="Primary" role="list" id="nav-list">
+          <li id="homeButton">
+            <a href="#home" class="active" id="homeLink">Home</a>
+          </li>
+          <li><a href="#about" id="aboutLink">About</a></li>
+          <li><a href="#skills" id="skillLink">Skills</a></li>
+          <li><a href="#portfolio" id="portfolioLink">Portfolio</a></li>
+          <li><a href="#testimonials" id="testimonialLink">Testimonials</a></li>
+          <li><a href="#contact" id="contactLink">Contact</a></li>
+        </ul>
+      
+        <div class="right-site">
+          <button class="toggle-btn" id="toggleBtn">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <button class="close-btn" id="closeBtn">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <button class="hire-me-btn btn">Hire me</button>
+        </div>
+      </nav>
+       -->
+
+      <main>
+        <!-- for home  -->
+        <section class="home-container panel" id="home">
+<!--           
+          <div class="animated-shapes">
+            
+            <div class="shape shape--1 path--1"></div>
+            <div class="shape shape--2 path--1"></div>
+            <div class="shape shape--3 path--1"></div>
+            <div class="shape shape--4 path--1"></div>
+            <div class="shape shape--5 path--1"></div>
+            <div class="shape shape--6 path--1"></div>
+          </div> -->
+
+          <canvas id="dotCanvas"></canvas>
+
+          <div class="home-left">
+            <h5 id="myName">Hi! I'm Sagor</h5>
+            <p class="dev-text">Passionate Front End Dev.</p>
+
+            <p class="brif-text " id="brifText">
+              Hello! I'm Sagor Mohammed Yousuf, a Front End Developer dedicated
+              to crafting user-centric digital experiences. With a blend of
+              creativity and technical expertise, I breathe life into ideas
+              through elegant web solutions. Let's build something extraordinary
+              together.
+            </p>
+            <button class="contact-btn">Contact me</button>
+          </div>
+          <div class="home-right backInRight">
+            <img class="backOutRight" src="hello.svg" />
+          </div>
+        </section>
+
+        <!-- about  -->
+        <section class="about panel" id="about">
+          <h5>About me</h5>
+
+          <p class="start-about">
+            <span class="about-name typing">Hello! I'm Sagor Mohammed Yousuf</span> , a
+            passionate Front End Developer with a drive for crafting exceptional
+            digital experiences. My journey in the world of web development
+            began with a fascination for technology and a desire to create
+            meaningful connections through code.
+          </p>
+
+          <p class="be-text">
+            <span>Background & Education: </span> I hold a degree in Computer
+            Science, where I cultivated a strong foundation in programming
+            principles and software development. Throughout my academic journey,
+            I discovered my passion for Front End development and embarked on a
+            quest to master the art of building beautiful and intuitive
+            interfaces.
+          </p>
+
+          <p class="pro-text">
+            <span>Professional Journey:</span> With several years of hands-on
+            experience in the field, I've had the privilege of working on a
+            diverse range of projects, each presenting unique challenges and
+            opportunities for growth. From collaborating with startups to
+            partnering with established businesses, I've honed my skills in
+            HTML, CSS, JavaScript, and various frameworks to deliver solutions
+            that exceed expectations.
+          </p>
+
+          <p class="passion-text">
+            <span>Passion for Front End Development:</span> What drives me in
+            this field is not just the technical aspects of coding, but the
+            ability to create experiences that resonate with users on a deeper
+            level. I'm fascinated by the intersection of design and technology,
+            where aesthetics meet functionality to shape the way we interact
+            with the digital world.
+          </p>
+          <p class="quality-text">
+            <span>Commitment to Quality:</span> I believe that attention to
+            detail is paramount in Front End development. Whether it's ensuring
+            seamless responsiveness across devices, optimizing performance for
+            speed and efficiency, or refining user interfaces for intuitive
+            navigation, I'm committed to delivering solutions that not only meet
+            but exceed standards of excellence.
+          </p>
+
+          <p class="end-text">
+            As I continue on this journey, my goal is to continue pushing the
+            boundaries of what's possible in web development, exploring new
+            technologies, and creating experiences that inspire and delight
+            users.
+          </p>
+
+          <p class="end-2-text">
+            Let's connect and embark on this journey together.
+          </p>
+        </section>
+
+        <!-- skills -->
+        <section class="top-container diagonal  ">
+          <div class="intro">
+            <div class="skills " id="skills">
+              <h4 class="skill-text">Skills</h4>
+
+              <div class="skill-div backInRight">
+                <div class="skill html">
+                  <p>HTML</p>
+                  <!-- <img src="html5.svg"> -->
+                </div>
+                <div class="skill css">
+                  <p>CSS</p>
+                </div>
+                <div class="skill js">
+                  <p>JS</p>
+                </div>
+                <div class="skill jquery">
+                  <p>JQuery</p>
+                </div>
+                <div class="skill react">
+                  <p>React</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--/ protfolio //  -->
+
+        <section class="portfolio panel" id="portfolio">
+          <h4>Portfolio</h4>
+          <main class="portfolios">
+            <div class="social-book gsapAnim">
+              <p>Socialbook</p>
+              <img class="" src="social-book.jpg" />
+            </div>
+            <div class="manage gsapAnim">
+              <p>Manage</p>
+              <img src="fem-challenge.jpg" />
+            </div>
+            <div class="asana gsapAnim">
+              <p>Asana</p>
+              <img src="asana-homepage-1.png" />
+            </div>
+            <div class="calc gsapAnim">
+              <p>calculator</p>
+              <img src="calc.jpg" alt="" />
+            </div>
+            <!-- <div class="click-game">
+          <p>Click And Run</p>
+          <img src="click-game.png"/>
+        </div> -->
+          </main>
+        </section>
+
+        <section class="testimonials panel wavy" id="testimonials">
+          <h5>Testimonials</h5>
+
+          <div class="testimonial-container">
+            <div class="btn" id="btn-prev">
+              <i class="fa-solid fa-chevron-left"></i>
+            </div>
+            <div class="btn" id="btn-next">
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial">
+              I've worked with literally hundreds of HTML/CSS developers and I
+              have to say the top spot goes to this guy. This guy is an amazing
+              developer. He stresses on good, clean code and pays heed to the
+              details. I love developers who respect each and every aspect of a
+              throughly thought out design and do their best to put it in code.
+              He goes over and beyond and transforms ART into PIXELS - without a
+              glitch, every time.
+            </p>
+            <div class="user">
+              <img
+                src="https://randomuser.me/api/portraits/women/46.jpg"
+                alt="user"
+                class="user-image"
+              />
+              <div class="user-details">
+                <h4 class="username">Miyah Myles</h4>
+                <p class="role">Marketing</p>
+              </div>
+            </div>
+            <div class="progress-dots" id="progress-dots"></div>
+          </div>
+        </section>
+
+        <!-- contact  -->
+        <section class="contact panel" id="contact">
+          <h5>Contact me</h5>
+          <div class="contact-btm">
+            <div class="contact-left">
+              <form class="form" method="post">
+                <input type="text" name="name" placeholder="Name" required />
+                <input type="email" name="email" placeholder="Email" required />
+                <input
+                  type="text"
+                  name="subject"
+                  placeholder="Subject"
+                  required
+                />
+                <textarea
+                  name="message"
+                  placeholder="Text Your message"
+                  required
+                ></textarea>
+                <button type="submit">Send</button>
+              </form>
+
+              <div class="social-wrap">
+                <p class="social-text">Social</p>
+
+                <div class="social">
+                  <img src="twitter.png" alt="twitter" />
+                  <img src="linkedin.png" alt="linkedin" />
+                  <img src="facebook.png" alt="facebook" />
+                  <img src="instagram.png" alt="instagram" />
+                  <img src="whatsapp.png" alt="whatsapp" />
+                </div>
+              </div>
+            </div>
+            <div class="contact-right">
+              <img src="contact.svg" />
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/1.0.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/split-type@0.3.4/umd/index.min.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    
+    <script>
+      const myName = new SplitType("#myName");
+      gsap.to(".char", {
+        y: 0,
+        stagger: 0.05,
+        delay: 0,
+        duration: 0.01,
+      });
+
+      // Function to start the animation
+      function startAnimation() {
+        const myName = new SplitType("#myName");
+        gsap.to(".char", {
+          y: 0,
+          stagger: 0.05,
+          delay: 0,
+          duration: 0.01,
+        });
+      }
+
+      // Add event listener to the home button
+      const homeButton = document.getElementById("homeButton"); // Change 'homeButton' to the ID of your home button
+      if (homeButton) {
+        homeButton.addEventListener("click", startAnimation);
+      }
+
+      const primaryHeader = document.querySelector(".primary-header");
+      const navToggle = document.querySelector(".mobile-nav-toggle");
+      const primaryNav = document.querySelector(".primary-navigation");
+
+      navToggle.addEventListener("click", () => {
+        primaryNav.hasAttribute("data-visible")
+          ? navToggle.setAttribute("aria-expanded", false)
+          : navToggle.setAttribute("aria-expanded", true);
+        primaryNav.toggleAttribute("data-visible");
+        primaryHeader.toggleAttribute("data-overlay-hidden");
+      });
+
+      //   // // scrolltriger //
+      
+
+
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>
