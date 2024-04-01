@@ -92,219 +92,68 @@ displayTestimonial();
 
 
 
-// canvas // 
-
-
-function getDocumentWidth() {
-  return Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-};
-
-function getDocumentHeight() {
-  return Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
-};
-
-var canvas = document.getElementById('dotCanvas');
-var context = canvas.getContext('2d');
-
-var vw = getDocumentWidth(),
-    vh = getDocumentHeight();
-
-// resize the canvas to fill the browser window
-window.addEventListener('resize', onResize, false);
-function onResize() {
-  vw = getDocumentWidth();
-  vh = getDocumentHeight();
-  resizeCanvas();
-}
-
-function resizeCanvas() {
-  canvas.width = vw;
-  canvas.height = vh;
-  drawDots();
-}
-resizeCanvas();
-
-
-// grid
-function drawGrid(){
-  var cellW = 10,
-      cellH = 10;
-  
-  // vertical lines
-  for (var x = 0; x <= vw; x += cellW) {
-      context.moveTo(x, 0); // x, y
-      context.lineTo(x, vh);
-  }
-  
-  // horizontal lines
-  for (var y = 0; y <= vh; y += cellH) {
-      context.moveTo(0, y); // x, y
-      context.lineTo(vw, y);
-  }
-
-  context.strokeStyle = "#cccccc";
-  context.stroke();
-}
-// drawGrid();
-
-// dots
-function drawDots() {
-  var r = 1,
-      cw = 20,
-      ch = 20;
-  
-  for (var x = 15; x < vw; x+=cw) {
-    for (var y = 15; y < vh; y+=ch) {
-        context.fillStyle = '#000000';   
-        context.fillRect(x-r/2,y-r/2,r,r);
-      }
-  }
-}
-drawDots();
 
 
 
 
+//TRAILING DOTS
 
+ const dotSize = 2.5
+ const spacing = dotSize * 8
+ const areaOfEffect = 64
 
+ let dots = []
 
+ function setup() {
+     let cnv = createCanvas(windowWidth, windowHeight);
+     cnv.parent('canvas-container');
+     for (let i = 0; i < width; i += spacing) {
+         for (let j = 0; j < height; j += spacing) {
+             dots.push(new Dot(i + spacing / 2,j + spacing / 2,dotSize))
+         }
+     }
+     noStroke()
+ }
 
+ function draw() {
+     background(255, 255, 255);
+     dots.forEach(dot=>{
+         dot.update()
+         dot.render()
+     }
+     )
+ }
 
+ let mouseIsMoving = false;
 
+ function mouseMoved() {
+     mouseIsMoving = true
+     setTimeout(()=>mouseIsMoving = false, 100)
+ }
 
+ class Dot {
+     constructor(x, y, size) {
+         this.x = x;
+         this.y = y;
+         this.size = size;
+         this.transparency = 40
+     }
 
+     update() {
+         let distance = dist(mouseX, mouseY, this.x, this.y)
+         if (mouseIsMoving && distance < areaOfEffect) {
+             this.transparency = 255
+         } else {
+             this.transparency = max(40, this.transparency - 10)
+         }
+     }
 
+     render() {
+         fill(138, 138, 138, this.transparency)
 
-
-
-
-
-
-
-
-
-
-// let container = document.querySelector(".main-wrapper");
-// let section = container.querySelectorAll("section");
-
-// let tl = gsap
-//   .timeline({
-//     scrollTrigger: {
-//       trigger: container,
-//       scrub: 1,
-//       pin: true,
-//       start: "top top",
-//       end: "+=3300",
-//     },
-//   })
-//   .to(container, {
-//     x: () =>
-//       -(container.scrollWidth - document.documentElement.clientWidth - 95) +
-//       "px",
-//     ease: "none",
-//     duration: 1,
-//   })
-//   .to(".side-bar", {
-//     x: 70,
-//     opacity: 1,
-//     scrollTrigger: {
-//       trigger: ".side-bar",
-//       start: "center+=2500 center",
-//       scrub: 2.5,
-//     },
-//   })
-//   .to({}, { duration: 1 / (section.length + 1) });
-
-// gsap.to(".col-1", {
-//   y: -250,
-//   ease: "none",
-//   duration: 2,
-//   scrollTrigger: {
-//     trigger: ".image-gallery",
-//     start: "top center",
-//     end: "+=3000",
-//     scrub: true,
-//   },
-// });
-// gsap.to(".col-2", {
-//   y: 250,
-//   ease: "none",
-//   duration: 2,
-//   scrollTrigger: {
-//     trigger: ".image-gallery",
-//     start: "top center",
-//     end: "+=3000",
-//     scrub: true,
-//   },
-// });
-// gsap.to(".col-3", {
-//   y: -250,
-//   ease: "none",
-//   duration: 2,
-//   scrollTrigger: {
-//     trigger: ".image-gallery",
-//     start: "top center",
-//     end: "+=3000",
-//     scrub: true,
-//   },
-// });
-
-// gsap.from(".row-2", {
-//   height: "0%",
-//   duration: 1,
-//   delay: 0.5,
-//   scrollTrigger: {
-//     trigger: ".section-3",
-//     start: "40% center",
-//     toggleActions: "play pause reverse reverse",
-//   },
-// });
-
-// gsap.from(".row li", {
-//   y: 200,
-//   opacity: 0,
-//   ease: "none",
-//   delay: 2,
-//   duration: 2,
-//   stagger: {
-//     amount: 1,
-//   },
-//   scrollTrigger: {
-//     trigger: ".row li",
-//     toggleActions: "play pause reverse reverse",
-//   },
-// });
-
-// gsap.to(".num", {
-//   x: 600,
-//   duration: 2,
-//   scrollTrigger: {
-//     trigger: ".num",
-//     start: "right left",
-//   },
-// });
-
-
-
-
-
-
-
-
-// const aa = document.getElementById('homeLink');
-
-// aa.style.color = 'red';
-
-
-
-
-
-
-
-
-
-
-
+         ellipse(this.x, this.y, this.size)
+     }
+ }
 
 
 
