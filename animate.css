@@ -354,19 +354,31 @@ section {
 
 
 .canvas {
-  
+ 
   top: 0;
   left: 0;
   position: absolute;
-  height: 200vh !important;
+  height: 100vh ;
+  width: 100%;
   opacity: 0.8;
   transition: opacity 0.5s ease;
+  -webkit-transition: opacity 0.5s ease;
+  -moz-transition: opacity 0.5s ease;
+  -ms-transition: opacity 0.5s ease;
+  -o-transition: opacity 0.5s ease;
+
+
+
+  @media (max-width : 764px ) {
+   
+    z-index: -1;
+  }
 }
 
 .features-div {
   grid-column-gap: 1em;
   grid-row-gap: 1em;
-  opacity: 1;
+  opacity: 0.6;
   color: #ccc;
   flex-direction: column;
   align-items: flex-start;
@@ -377,4 +389,85 @@ section {
 }
 .features-div.active {
   color: #fff;
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* animated text  */
+
+.section {
+  background-color: rgb(114, 114, 114);
+  height: 100vh;
+  display: flex;
+  /* align-items: center;
+  justify-content: center; */
+  overflow: hidden !important;
+  z-index: 0;
+  position: relative;
+
+  
+}
+
+
+
+.sticky {
+  /* width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden !important;
+  position: fixed;
+  
+  top: 0;
+  left: 0;
+color: #fff; */
+
+
+top: 0;
+left: 0;
+
+justify-content: center;
+align-items: center;
+display: flex;
+
+position: fixed;
+
+overflow: hidden;
+
+  
+}
+
+
+
+.scroll-track {
+  z-index: 1;
+  height:150vh;
+  position: relative;
+  
+}
+.text-wrap {
+  max-width: 100%;
+  padding: 7rem;
+  text-align: center;
+  /* justify-content: center;
+  align-items: center;
+  display: flex; */
+  position: relative;
+}
+.paragraph-text {
+  text-align: center;
+  margin-bottom: 0;
+  font-size: 2rem;
+  line-height: 1.4;
+  visibility: visible;
+  z-index: -1;
 }

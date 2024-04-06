@@ -318,6 +318,13 @@ $tablet: 768px;
           font-size: 18px;
           font-weight: 500;
           color: #333333;
+
+
+          @media (max-width : 764px) {
+            font-size: 14px;
+            font-weight: 400;
+            text-align: center;
+          }
         }
 
         .contact-btn {
@@ -363,6 +370,7 @@ $tablet: 768px;
 
       @media (max-width: 764px) {
         padding: 15px;
+        z-index: 99;
       }
 
       h5 {
@@ -382,6 +390,7 @@ $tablet: 768px;
 
         @media (max-width: $tablet) {
           font-size: 14px;
+         
         }
 
       //   .features-div.active {
@@ -536,6 +545,8 @@ $tablet: 768px;
     // portfolio //
 
     .portfolio {
+      position: relative;
+      z-index: 1000;
       display: flex;
       align-items: center;
       flex-direction: column;
@@ -561,6 +572,7 @@ $tablet: 768px;
       }
 
       .portfolios {
+     
         display: flex;
         align-items: center;
         justify-content: center;
@@ -578,8 +590,10 @@ $tablet: 768px;
           }
 
           img {
+       
             width: 800px;
             height: 400px;
+     
 
             @media (max-width: $tablet) {
               width: 100%;
@@ -591,6 +605,7 @@ $tablet: 768px;
     }
 
     .testimonials {
+      position: relative;
       margin-top: 20px;
       margin-bottom: 150px;
       height: 100vh;
@@ -652,6 +667,7 @@ $tablet: 768px;
       }
 
       .testimonial {
+       
         display: flex;
         align-items: center;
         text-align: center;
@@ -741,6 +757,7 @@ $tablet: 768px;
     }
 
     .contact {
+      position: relative;
       height: 100vh;
       width: 100%;
       background-color: #000;
@@ -882,9 +899,11 @@ $tablet: 768px;
               margin-top: 150px;
               font-size: 13px;
               padding: 10px;
+              color: #fff;
 
               @media (max-width: $tablet) {
-                margin-top: 5;
+                margin-top: 90px;
+                
               }
             }
 

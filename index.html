@@ -74,6 +74,7 @@
               through elegant web solutions. Let's build something extraordinary
               together.
             </p>
+
             <button class="contact-btn">Contact me</button>
           </div>
           <div class="home-right backInRight">
@@ -81,18 +82,16 @@
           </div>
         </section>
 
-        <!-- about  -->
-        <!-- <section class="about panel" id="about">
+        <section class="about panel" id="about">
           <h5>About me</h5>
 
           <div class="start-about features-div">
-            <span class="about-name typing"
-              >Hello! I'm Sagor Mohammed Yousuf</span
-            >
-            , a passionate Front End Developer with a drive for crafting
-            exceptional digital experiences. My journey in the world of web
-            development began with a fascination for technology and a desire to
-            create meaningful connections through code.
+            <!-- <span class="about-name typing">Hello! I'm Sagor Mohammed Yousuf</span> -->
+            Hello! I'm Sagor Mohammed Yousuf,a passionate Front End Developer
+            with a drive for crafting exceptional digital experiences. My
+            journey in the world of web development began with a fascination for
+            technology and a desire to create meaningful connections through
+            code.
           </div>
 
           <div class="be-text features-div">
@@ -104,7 +103,7 @@
             interfaces.
           </div>
 
-          <div class="pro-text features-div" >
+          <div class="pro-text features-div">
             <span>Professional Journey:</span> With several years of hands-on
             experience in the field, I've had the privilege of working on a
             diverse range of projects, each presenting unique challenges and
@@ -131,8 +130,8 @@
             but exceed standards of excellence.
           </div>
 
-          <div class="end-text features-div  ">
-           As I continue on this journey, my goal is to continue pushing the
+          <div class="end-text features-div">
+            As I continue on this journey, my goal is to continue pushing the
             boundaries of what's possible in web development, exploring new
             technologies, and creating experiences that inspire and delight
             users.
@@ -141,42 +140,7 @@
           <p class="end-2-text">
             Let's connect and embark on this journey together.
           </p>
-        </section> -->
-
-
-
-        
-    <section class="about panel" id="about">
-      <h5>About me</h5>
-
-      <div class="start-about features-div">
-          <!-- <span class="about-name typing">Hello! I'm Sagor Mohammed Yousuf</span> -->
-          Hello! I'm Sagor Mohammed Yousuf,a passionate Front End Developer with a drive for crafting exceptional digital experiences. My journey in the world of web development began with a fascination for technology and a desire to create meaningful connections through code.
-      </div>
-
-      <div class="be-text features-div">
-          <span>Background & Education: </span> I hold a degree in Computer Science, where I cultivated a strong foundation in programming principles and software development. Throughout my academic journey, I discovered my passion for Front End development and embarked on a quest to master the art of building beautiful and intuitive interfaces.
-      </div>
-
-      <div class="pro-text features-div" >
-          <span>Professional Journey:</span> With several years of hands-on experience in the field, I've had the privilege of working on a diverse range of projects, each presenting unique challenges and opportunities for growth. From collaborating with startups to partnering with established businesses, I've honed my skills in HTML, CSS, JavaScript, and various frameworks to deliver solutions that exceed expectations.
-      </div>
-
-      <div class="passion-text features-div">
-          <span>Passion for Front End Development:</span> What drives me in this field is not just the technical aspects of coding, but the ability to create experiences that resonate with users on a deeper level. I'm fascinated by the intersection of design and technology, where aesthetics meet functionality to shape the way we interact with the digital world.
-      </div>
-      <div class="quality-text features-div">
-          <span>Commitment to Quality:</span> I believe that attention to detail is paramount in Front End development. Whether it's ensuring seamless responsiveness across devices, optimizing performance for speed and efficiency, or refining user interfaces for intuitive navigation, I'm committed to delivering solutions that not only meet but exceed standards of excellence.
-      </div>
-
-      <div class="end-text features-div">
-          As I continue on this journey, my goal is to continue pushing the boundaries of what's possible in web development, exploring new technologies, and creating experiences that inspire and delight users.
-      </div>
-
-      <p class="end-2-text">
-          Let's connect and embark on this journey together.
-      </p>
-  </section>
+        </section>
 
         <!-- skills -->
         <section class="top-container diagonal">
@@ -205,6 +169,21 @@
             </div>
           </div>
         </section>
+
+        <div class="section">
+          <div class="container">
+            <div class="scroll-track">
+              <div class="sticky">
+                <div class="text-wrap">
+                  <p id="words-to-split" class="paragraph-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut commodo neque. Vivamus vestibulum, nulla id scelerisque cursus, felis nunc vulputate nisi, vitae consectetur justo elit ac urna. Proin non consectetur mi. Curabitur et arcu nec lorem vestibulum fermentum. Nullam quis nisi sed lorem blandit accumsan.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!--/ protfolio //  -->
 
         <section class="portfolio panel" id="portfolio">
@@ -365,10 +344,6 @@
 
       //   // // scrolltriger //
 
-
-
-
-
       // canvas
 
       const dotSize = 2.5;
@@ -427,57 +402,112 @@
         }
       }
 
+      window.addEventListener("scroll", function () {
+        var enterHeight = window.innerHeight / 2;
+        var exitHeight = enterHeight + enterHeight / 1.3;
+        var elements = document.querySelectorAll(".features-div");
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
- window.addEventListener("scroll", function() {
-  var enterHeight = window.innerHeight / 2;
-  var exitHeight = enterHeight + enterHeight / 1.3;
-  var elements = document.querySelectorAll(".features-div");
-
-  if (window.innerWidth <= 767) {
-      elements.forEach(function(element) {
-          var distanceFromBottom = window.scrollY + window.innerHeight - element.offsetTop;
-          if (distanceFromBottom >= enterHeight && distanceFromBottom < exitHeight) {
+        if (window.innerWidth <= 767) {
+          elements.forEach(function (element) {
+            var distanceFromBottom =
+              window.scrollY + window.innerHeight - element.offsetTop;
+            if (
+              distanceFromBottom >= enterHeight &&
+              distanceFromBottom < exitHeight
+            ) {
               element.classList.add("active");
-          } else {
+            } else {
               element.classList.remove("active");
-          }
-      });
-  } else {
-      elements.forEach(function(element) {
-          var distanceFromBottom = window.scrollY + window.innerHeight - element.offsetTop;
-          if (distanceFromBottom >= enterHeight && distanceFromBottom < exitHeight) {
-              elements.forEach(function(el) {
-                  el.classList.remove("active");
+            }
+          });
+        } else {
+          elements.forEach(function (element) {
+            var distanceFromBottom =
+              window.scrollY + window.innerHeight - element.offsetTop;
+            if (
+              distanceFromBottom >= enterHeight &&
+              distanceFromBottom < exitHeight
+            ) {
+              elements.forEach(function (el) {
+                el.classList.remove("active");
               });
               element.classList.add("active");
-          } else {
+            } else {
               element.classList.remove("active");
-          }
+            }
+          });
+        }
       });
-  }
-});
-    </script>
 
+      // animated text //
+
+      function init() {
+        gsap.registerPlugin(ScrollTrigger);
+
+
+        const wordsToSplit = document.querySelector("#words-to-split");
+
+        // Split the text into words as spans
+        const splitType = new SplitType(wordsToSplit, {
+          types: "words",
+        });
+
+        // Set the visibility of animated words to visible
+        splitType.words.forEach((word) => {
+          word.style.visibility = "visible";
+        });
+
+        // Create a timeline for the split text animation
+        let tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: ".scroll-track",
+            start: "top top",
+            end: "bottom bottom",
+          
+            scrub: 1,
+          },
+        });
+
+        // Animate each word in the split text
+        tl.from(splitType.words, {
+          opacity: 0,
+          rotationZ: 30,
+          rotationX: 40,
+          yPercent: -300,
+          xPercent: 100,
+          stagger: 0.05,
+        });
+
+       
+        function handleResize() {
+          tl.clear(); 
+          tl.progress(0); 
+          matchLocation(); 
+          tl.restart();
+        }
+
+        // Match the animated words' positions to their static counterparts
+        function matchLocation() {
+          splitType.words.forEach((word) => {
+            const staticWordId = word.id.replace("-static", "-animated");
+            const staticWord = document.getElementById(staticWordId);
+            const boundsRel = staticWord.getBoundingClientRect();
+            gsap.set(word, {
+              x: boundsRel.left - word.getBoundingClientRect().left,
+              y: boundsRel.top - word.getBoundingClientRect().top,
+            });
+          });
+        }
+
+        // Add event listener for window resize
+        window.addEventListener("resize", handleResize);
+      }
+
+      window.addEventListener("load", init);
+
+
+
+
+    </script>
   </body>
 </html>
